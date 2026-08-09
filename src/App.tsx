@@ -6,6 +6,7 @@ import Planner  from './pages/Planner';
 import MyTrips  from './pages/MyTrips';
 import About    from './pages/About';
 import Login    from './pages/Login';
+import SignUp   from './pages/SignUp';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 import './styles/globals.css';
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/my-trips"  element={<MyTrips />} />
         <Route path="/about"     element={<About />} />
         <Route path="/login"     element={<Login />} />
+        <Route path="/signup"    element={<SignUp />} />
         <Route path="/privacy"   element={<PrivacyPolicy />} />
         <Route path="/terms"     element={<TermsOfService />} />
         {/* Fallback */}

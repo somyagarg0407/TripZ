@@ -3,6 +3,7 @@ import { NavLink, Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
 const NAV_LINKS = [
+  { label: 'Home',       path: '/' },
   { label: 'Explore',    path: '/explore' },
   { label: 'AI Planner', path: '/planner' },
   { label: 'Trending',   path: '/trending' },
@@ -92,7 +93,7 @@ export default function Navbar({ transparent = false }: NavbarProps) {
             </div>
           </button>
           <Link to="/login" className="navbar__login">Login</Link>
-          <Link to="/login" className="btn btn-secondary btn-sm navbar__signup">Sign Up</Link>
+          <Link to="/signup" className="btn btn-secondary btn-sm navbar__signup">Sign Up</Link>
         </div>
 
         {/* Mobile hamburger */}
@@ -132,7 +133,7 @@ export default function Navbar({ transparent = false }: NavbarProps) {
         </ul>
         <div className="navbar__mobile-auth">
           <Link to="/login" className="btn btn-secondary" tabIndex={menuOpen ? 0 : -1}>Login</Link>
-          <Link to="/login" className="btn btn-primary" tabIndex={menuOpen ? 0 : -1}>Sign Up</Link>
+          <Link to="/signup" className="btn btn-primary" tabIndex={menuOpen ? 0 : -1}>Sign Up</Link>
         </div>
       </div>
     </nav>

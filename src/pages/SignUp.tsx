@@ -2,10 +2,11 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Auth.css';
 
-export default function Login() {
+export default function SignUp() {
+  const [name, setName]           = useState('');
   const [email, setEmail]         = useState('');
   const [password, setPassword]   = useState('');
-  const [remember, setRemember]   = useState(false);
+  const [agree, setAgree]         = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -38,14 +39,28 @@ export default function Login() {
       {/* RIGHT SIDE: AUTH FORM */}
       <main className="auth__form-side">
         <div className="auth__form-container">
-          <h1 className="auth__title">BACK FOR ANOTHER ESCAPE?</h1>
-          <p className="auth__sub">Log in and pick up where you left off.</p>
+          <h1 className="auth__title">READY TO ESCAPE?</h1>
+          <p className="auth__sub">Create your account and start exploring.</p>
 
           <form className="auth__form" onSubmit={handleSubmit} noValidate>
             <div className="auth__field">
-              <label htmlFor="login-email" className="auth__label">Email Address</label>
+              <label htmlFor="signup-name" className="auth__label">Full Name</label>
               <input
-                id="login-email"
+                id="signup-name"
+                type="text"
+                className="auth__input"
+                placeholder="Enter your name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                autoComplete="name"
+                required
+              />
+            </div>
+
+            <div className="auth__field">
+              <label htmlFor="signup-email" className="auth__label">Email Address</label>
+              <input
+                id="signup-email"
                 type="email"
                 className="auth__input"
                 placeholder="Enter your email"
@@ -57,15 +72,15 @@ export default function Login() {
             </div>
 
             <div className="auth__field">
-              <label htmlFor="login-password" className="auth__label">Password</label>
+              <label htmlFor="signup-password" className="auth__label">Password</label>
               <input
-                id="login-password"
+                id="signup-password"
                 type="password"
                 className="auth__input"
-                placeholder="Enter your password"
+                placeholder="Create a password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                autoComplete="current-password"
+                autoComplete="new-password"
                 required
               />
             </div>
@@ -74,15 +89,13 @@ export default function Login() {
               <label className="auth__checkbox-label">
                 <input
                   type="checkbox"
-                  checked={remember}
-                  onChange={(e) => setRemember(e.target.checked)}
+                  checked={agree}
+                  onChange={(e) => setAgree(e.target.checked)}
                   className="auth__checkbox"
+                  required
                 />
-                Remember me
+                I agree to the Terms & Privacy
               </label>
-              <button type="button" className="auth__forgot">
-                Forgot password?
-              </button>
             </div>
 
             <button
@@ -90,7 +103,7 @@ export default function Login() {
               className="auth__submit"
               disabled={isLoading}
             >
-              {isLoading ? 'Signing in...' : 'Login'}
+              {isLoading ? 'Creating account...' : 'Sign Up'}
             </button>
 
             <div className="auth__divider">or</div>
@@ -107,8 +120,8 @@ export default function Login() {
           </form>
 
           <p className="auth__switch">
-            Don't have an account?{' '}
-            <Link to="/signup" className="auth__switch-link">Sign Up</Link>
+            Already have an account?{' '}
+            <Link to="/login" className="auth__switch-link">Login</Link>
           </p>
         </div>
       </main>
