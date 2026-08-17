@@ -178,20 +178,20 @@
 .home__suit-factor-name {
   font-size: var(--text-sm);
   font-weight: 600;
-  color: var(--color-text-primary);
+  color: #ffffff;
   min-width: 90px;
 }
 
 .home__suit-factor-detail {
   font-size: var(--text-xs);
-  color: var(--color-text-secondary);
+  color: rgba(255, 255, 255, 0.65);
   flex: 1;
 }
 
 .home__suit-factor-score {
   font-size: var(--text-sm);
   font-weight: 700;
-  color: var(--color-text-primary);
+  color: #ffffff;
   min-width: 28px;
   text-align: right;
 }

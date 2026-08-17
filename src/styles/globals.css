@@ -86,39 +86,56 @@
   --transition-cinematic: 1200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
   /* Navbar */
-  --navbar-height: 74px;
+  --navbar-height: 64px;
+  --color-navbar-solid: rgba(14, 14, 14, 0.96);
+  --color-navbar-scrolled: rgba(14, 14, 14, 0.92);
+
+  /* Glass / search bar */
+  --color-glass-bg: rgba(10, 10, 10, 0.82);
+  --color-glass-bg-2: rgba(18, 18, 18, 0.97);
+  --color-glass-border: rgba(255, 255, 255, 0.12);
+  --color-glass-input-focus: rgba(255, 255, 255, 0.04);
+
+  /* Score bars */
+  --color-score-bar: rgba(255, 255, 255, 0.85);
 
   /* Content max widths */
   --max-width: 1280px;
   --max-width-md: 900px;
 }
 
+/* ============================================================
+   Light Theme Override
+   ============================================================ */
 [data-theme="light"] {
-  --color-bg: #f8f9fa;
-  --color-bg-2: #ffffff;
-  --color-bg-3: #f0f2f5;
-  --color-surface: #ffffff;
-  --color-surface-2: #f8f9fa;
-  --color-border: rgba(0, 0, 0, 0.08);
-  --color-border-2: rgba(0, 0, 0, 0.14);
+  --color-bg: #f5f4f1;
+  --color-bg-2: #eeece8;
+  --color-bg-3: #e6e3de;
+  --color-surface: #e8e6e1;
+  --color-surface-2: #dedad4;
+  --color-border: rgba(0, 0, 0, 0.1);
+  --color-border-2: rgba(0, 0, 0, 0.18);
 
-  --color-text-primary: #1a1a1a;
-  --color-text-secondary: #5c5a57;
-  --color-text-muted: #8a8885;
-  --color-text-inverse: #ffffff;
+  --color-text-primary: #111110;
+  --color-text-secondary: #4a4845;
+  --color-text-muted: #9a9690;
+  --color-text-inverse: #f5f4f1;
 
-  --color-accent: #2c2c2c;
-  --color-accent-dim: rgba(44, 44, 44, 0.1);
+  --color-accent: #111110;
+  --color-accent-dim: rgba(0, 0, 0, 0.07);
 
-  /* Glass / Overlay */
-  --color-glass-bg: rgba(255, 255, 255, 0.85);
-  --color-glass-bg-2: rgba(255, 255, 255, 0.97);
-  --color-glass-border: rgba(0, 0, 0, 0.12);
-  --color-glass-input: rgba(0, 0, 0, 0.06);
-  --color-glass-input-focus: rgba(0, 0, 0, 0.09);
-  --color-score-bar: var(--color-text-primary);
-  --color-navbar-solid: rgba(255, 255, 255, 0.96);
-  --color-navbar-scrolled: rgba(255, 255, 255, 0.92);
+  /* Glass / search bar */
+  --color-glass-bg: rgba(240, 238, 234, 0.92);
+  --color-glass-bg-2: rgba(235, 233, 228, 0.97);
+  --color-glass-border: rgba(0, 0, 0, 0.1);
+  --color-glass-input-focus: rgba(0, 0, 0, 0.03);
+
+  /* Score bars */
+  --color-score-bar: rgba(17, 17, 16, 0.7);
+
+  /* Navbar */
+  --color-navbar-solid: rgba(245, 244, 241, 0.96);
+  --color-navbar-scrolled: rgba(245, 244, 241, 0.92);
 }
 
 /* ============================================================
